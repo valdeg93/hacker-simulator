@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хакер Симулятор</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Хакер Симулятор</h1>
+    <button onclick="createSystem()">Создать систему</button>
+    <button onclick="attackSystem()">Атаковать систему</button>
+    <button onclick="startTutorial()">Обучение</button>
+
+    <script>
+        let tg = window.Telegram.WebApp;
+
+        function createSystem() {
+            tg.showAlert("Создание системы...");
+        }
+
+        function attackSystem() {
+            tg.showAlert("Атака системы...");
+        }
+
+        function startTutorial() {
+            tg.showAlert("Начало обучения...");
+        }
+
+        tg.expand();
+        tg.ready();
+    </script>
+</body>
+</html>
